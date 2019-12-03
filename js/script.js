@@ -1,4 +1,35 @@
+let playerRightNow ="O"
+let alternateTurn = 0;
+let endGame = false;
 
+function switchPlayers() {
+    alternateTurn = alternateTurn + 1
+    if (playerRightNow === "X") {
+        playerRightNow = "O";
+    }
+    else if (playerRightNow = "O"){
+        playerRightNow = "X";
+    }
+}
+
+function tieGame() {
+    if(alternateTurn > 8 && endGame === false){
+        $("h2").text("It's a tie!");
+        endGame = true;
+    }
+}
+
+function horizonatalWin() {
+    if()
+}
+
+function vertialWin() {
+    if)
+}
+
+function diagonalWin() {
+    if()
+}
 
 
 
