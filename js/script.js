@@ -2,6 +2,16 @@ let playerRightNow ="O"
 let alternateTurn = 0;
 let endGame = false;
 
+var button1 = button1
+var button2 = button2
+var button3 = button3
+var button4 = button4
+var button5 = button5
+var button6 = button6
+var button7 = button7
+var button8 = button8
+var button9 = button9
+
 function switchPlayers() {
     alternateTurn = alternateTurn + 1
     if (playerRightNow === "X") {
@@ -19,21 +29,32 @@ function tieGame() {
     }
 }
 
-function horizonatalWin() {
-    if()
-}
-
-function vertialWin() {
-    if)
-}
-
-function diagonalWin() {
-    if()
+function checkHorizontalWins() {
+    win("#tile1", "#tile2", "#tile3"); 
+    win("#tile4", "#tile5", "#tile6"); 
+    win("#tile7", "#tile8", "#tile9");
 }
 
 
+function checkVerticalWins() {
+    win("#tile1", "#tile4", "#tile7"); 
+    win("#tile2", "#tile5", "#tile8"); 
+    win("#tile3", "#tile6", "#tile9");
+}
 
-
+function checkDiagonalWins() {
+    win("#tile1", "#tile5", "#tile9"); 
+    win("#tile3", "#tile5", "#tile7"); 
+}
+function performLogic(button,tile) {
+    if (gameIsOver === false) {
+    $(button).hide();
+    $(tile).html(alternateTurn);
+    checkVerticalWins();
+    checkDiagonalWins():
+    checkHorizontalWins();
+    tieGame();
+    }
 
 
 $("#button1").click(function() {
